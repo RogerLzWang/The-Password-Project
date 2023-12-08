@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Home</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body onload="loadPageOne()">
+        <script src="js/index.js"></script>
+        <script src="js/groups.js"></script>
+        <script src="js/common-passwords.js"></script>
+
+        <script src="js/checker/rule.js"></script>
+        <script src="js/checker/group.js"></script>
+        <script src="js/checker/dictionary.js"></script>
+
+        <header>
+            <div class="horizontal-color" 
+                style="height: 10px; background-color: #4c8fc2;"></div>
+
+            <nav>
+                <div class="logo"> The Password Project </div>
+                
+                <div class="nav-items">
+                    <a href="index.html">Home</a>
+                    <a href="common.html">Common Passwords</a>
+                </div>
+            </nav>
+        </header>
+
+            <!-- <div class="navigation-bar">
+                <div>
+                    <a class="navigation-bar-item">Home</a>
+                </div>
+                <div>
+                    <a class="navigation-bar-item">Page 2</a>
+                </div>
+            </div> -->
+
+        <div class="content-container-grid">
+                <div class="column-left">
+                    <div>
+                    <p>Welcome! We created the password project to standardize incoherent password guidlines accross different universities. 
+                        To check your password against the university standards on this page, please input a password below. To check commonly used passwords against the university
+                        standards, go to the next page. We hope you find our tool useful! </p>                    
+                        <h2>Password Checker</h2>
+                        <p>Input your password below. To preview a university's password standards, hover over that 
+                            university's logo. To check your password against a university's standards, select that 
+                            university's logo and the results will appear in the table below.</p>
+                    </div>
+                    <h1>Enter Your Password</h1>
+                    <div>
+                        <input id="password-input" type="password" maxlength="256" placeholder="Enter your password here..."> </input> 
+                        <span class = "eye" onclick="togglePassword()">
+                        <svg id="eye-closed" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">
+                            <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/>
+                            <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"/>
+                            <path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z"/>
+                        </svg>
+                        <svg display = "none" id="eye-open" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                        </svg>
+                        </span> 
+                    </div>
+                </div>
+                <div class="column-right">
+                    <h1>Choose Your Criteria</h1>
+                    <div id="school-buttons" class="button-container">
+                        <button id="logo-btn-0" class="logo-button dropdown" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" onclick="sendPasswordOnClick(this);">
+                            <img class="school-logo" src="images/swat-icon.png">
+                            <ul id="dd-0" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li id="f60b25bd-ea2c-462c-9dc6-793a7059bdfe">Swarthmore College</li>
+                            </ul>
+                        </button>
+                        <button id="logo-btn-1" class="logo-button dropdown" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" onclick="sendPasswordOnClick(this);">
+                            <img class="school-logo" src="https://seeklogo.com/images/U/ucla-athletics-logo-5AAB3E3508-seeklogo.com.png"
+                                height="66%" width="100%">
+                            <ul id="dd-1" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li id = "4ecaae4c-a180-4ff7-b663-aa04d10bbc2b">UCLA</li>
+                            </ul>
+                        </button>
+                        <button id="logo-btn-2" class="logo-button dropdown" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" onclick="sendPasswordOnClick(this);">
+                            <img class="school-logo"
+                                src="https://seeklogo.com/images/C/carnegie-mellon-university-logo-22C9763CEA-seeklogo.com.png">
+                            <ul id="dd-2" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li id = "a529754b-cf4a-4a55-ae66-e963435e620c">Carnegie Mellon University</li>
+                            </ul>
+                        </button>
+                        <button id="logo-btn-3" class="logo-button dropdown" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" onclick="sendPasswordOnClick(this);">
+                            <img class="school-logo"
+                                src="https://seeklogo.com/images/U/university-of-texas-at-austin-longhorns-logo-68667F7CAD-seeklogo.com.png">
+                            <ul id="dd-3" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li id = "494384e8-ccf1-4b6f-80de-aca415feca8d">University of Texas at Austin</li>
+                            </ul>
+                        </button>
+                        <button id="logo-btn-4" class="logo-button dropdown" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" onclick="sendPasswordOnClick(this);">
+                            <img class="school-logo"
+                                src="https://seeklogo.com/images/U/university-of-california-berkeley-athletic-logo-815CB73082-seeklogo.com.png">
+                            <ul id="dd-4" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li id = "b33808b1-a4d2-4b8e-b6d5-396cd67a3a98">Berkeley</li>
+                            </ul>
+                        </button>
+                        <button id="logo-btn-5" class="logo-button dropdown" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" onclick="sendPasswordOnClick(this);">
+                            <img class="school-logo"
+                                src="https://seeklogo.com/images/P/princeton-university-logo-16B4E14E01-seeklogo.com.png">
+                            <ul id="dd-5" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li id = "601c4f73-0801-4dcf-8f51-9945f2bcab7d">Princeton University</li>
+                            </ul>
+                        </button>
+                        <!-- <button id="logo-btn-6" class="logo-button dropdown" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" onclick="setRules(this);">
+                            <img class="school-logo"
+                                src="https://seeklogo.com/images/C/cornell-university-logo-D0E64090DB-seeklogo.com.png">
+                            <ul id="dd-6" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li id = "name-6">Cornell University</li>
+                            </ul>
+                        </button> -->
+                        <button id="logo-btn-6" class="logo-button dropdown" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" onclick="sendPasswordOnClick(this);">
+                            <img class="school-logo"
+                                src="https://seeklogo.com/images/C/columbia-university-logo-84C4D6BE0B-seeklogo.com.png">
+                            <ul id="dd-6" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li id = "b01b6a68-4436-46da-b9c5-0d292508ca83">Columbia University</li>
+                            </ul>
+                        </button>
+                        <button id="logo-btn-7" class="logo-button dropdown" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" onclick="sendPasswordOnClick(this);">
+                            <img class="school-logo" src="https://seeklogo.com/images/R/red-gray-mit-logo-6061CB4283-seeklogo.com.png">
+                            <ul id="dd-7" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li id = "919b5000-a462-43e6-9464-125fb2af76c4">MIT</li>
+                            </ul>
+                        </button>
+                        <button id="logo-btn-8" class="logo-button dropdown" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" onclick="sendPasswordOnClick(this);">
+                            <img class="school-logo"
+                                src="https://seeklogo.com/images/S/stanford-cardinal-logo-8BF3F4F539-seeklogo.com.png">
+                            <ul id="dd-8" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li id = "a20347da-80b7-4757-93af-d961aec69aab">Stanford University</li>
+                            </ul>
+                        </button>
+                    </div>
+                </div>
+        </div>
+        <div class="content-container-full">
+            <div class="rectangle">
+                <!-- <table class="table table-striped"> -->
+                <table>
+                    <tbody id="school-list">
+                        <tr id="table-placeholder">
+                            <td>No rules selected!</td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+        </div>
+    </body>
+
+
+</html>
