@@ -84,6 +84,7 @@ input#password-input {
 }
 
 .column-left p {
+    font-family: "Inter-Regular", "Helvetica", "Roboto", sans-serif;
     font-size: 15px;
 }
 
