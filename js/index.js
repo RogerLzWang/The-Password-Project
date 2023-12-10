@@ -83,7 +83,6 @@ function loadRules() {
     let data = groups;
     // Loop through dropdown items and update with new rules.
     // From json, match groupID to dd-[i]].
-    // There must be an easier way to do this...
     for(let i = 0; i < buttons.length; i++ ) {
         let content = document.getElementById(groups[i].groupId).parentElement;
         let group = parseGroup(data[i]);
@@ -180,7 +179,7 @@ function setRules(btn) {
 }
 
 
-// Page 1: toggle btw show/hide entered password.
+// Page 1: toggle between show/hide entered password.
 function togglePassword() {
     var x = document.getElementById("password-input");
     var y = document.getElementById("eye-open"); 

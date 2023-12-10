@@ -20,7 +20,7 @@ nav {
     /* padding: 100 100px:  */
 }
 
-#nordpass-link {
+.links {
     text-decoration: none;
     cursor: pointer;
     color:#4c8fc2;
@@ -59,7 +59,7 @@ input#password-input {
     min-width: 500px;
 }
 
-.content-container-grid {
+.content-container-flex {
     display: flex;
     grid-template-columns: 1fr 1fr;
     /* height: 95vh; */
@@ -150,8 +150,6 @@ input#password-input {
 }
 
 .content-container-full {
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr; */
     padding: 3rem calc((100vw - 1300px)/2);
 }
 
@@ -252,7 +250,15 @@ li {
     content: "! ";
 }
 
+.content-container-about {
+    padding: 3rem calc((100vw - 900px)/2);
+}
+
 .footer-container {
     display: flex;
     justify-content: center;
+}
+
+.about-page-text {
+    font-size: 18px;
 }

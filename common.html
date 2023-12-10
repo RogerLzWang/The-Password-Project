@@ -8,16 +8,6 @@
         <link href="css/main.css" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     </head>
-
-    <!-- <body>
-        <h1>Page 2</h1>
-        <h1>This page will display commonly used passwords</h1>
-        <p>perhaps users can select one from a list and match it to university 
-            as many universities as they choose (also from a list)
-        </p>
-        <p> following this we will show a table displaying the check/X table</p>
-        <script src="js/index.js"></script>
-    </body> -->
     <body onload="loadPageTwo()">
         <script src="js/index.js"></script>
         <script src="js/groups.js"></script>
@@ -26,17 +16,6 @@
         <script src="js/checker/rule.js"></script>
         <script src="js/checker/group.js"></script>
         <script src="js/checker/dictionary.js"></script>
-
-        <!-- <script type='module' src='./js/checker/rule.mjs'></script>
-        <script type='module' src='./js/checker/group.mjs'></script> -->
-
-        <!-- <script type="module">
-            import * as Rule from './js/checker/rule.mjs'
-        </script>
-        <script type="module">
-            import * as Group from './js/checker/group.mjs'
-        </script> -->
-
         <header>
             <div class="horizontal-color" style="height: 10px; background-color: #4c8fc2;"></div>
             <nav>
@@ -47,13 +26,14 @@
                 <div class="nav-items">
                     <a href="index.html">Home</a>
                     <a href="common.html">Common Passwords</a>
+                    <a href="about.html">About</a>
                 </div>
             </nav>
         </header>
-        <div class="content-container-grid">
+        <div class="content-container-flex">
             <div class="column-left">
                 <p>Check 2022's top 200 passwords against university standards! See the 2019-2023 NordPass Top 200 Most Common Passwords
-                List <a id="nordpass-link" href="https://nordpass.com/most-common-passwords-list/">here.</a></p>
+                List <a class="links" href="https://nordpass.com/most-common-passwords-list/">here.</a></p>
                 <h2>Choose a Password</h2>
                 <div class="password-rectangle">
                     <table class="table table-striped">
@@ -123,14 +103,6 @@
                             <li id="601c4f73-0801-4dcf-8f51-9945f2bcab7d">Princeton University</li>
                         </ul>
                     </button>
-                    <!-- <button id="logo-btn-6" class="logo-button dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                        onclick="setRules(this);">
-                        <img class="school-logo" src="https://seeklogo.com/images/C/cornell-university-logo-D0E64090DB-seeklogo.com.png" 
-                            alt="Cornell University">
-                        <ul id="dd-6" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li id="name-6">Cornell University</li>
-                        </ul>
-                    </button> -->
                     <button id="logo-btn-6" class="logo-button dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"
                         onclick="sendPasswordOnClickP2(this);">
                         <img class="school-logo" src="https://seeklogo.com/images/C/columbia-university-logo-84C4D6BE0B-seeklogo.com.png" 
@@ -174,4 +146,7 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
     </body>
+    <footer class="footer-container">
+        Created by Bella Deanhardt, Ethan Ernst, Izzy Lopez-Kalapir, and Roger Wang. 2023.
+    </footer>
 </html>
