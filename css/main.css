@@ -49,7 +49,7 @@ nav a:hover{
 
 p {
     font-size: 14px;
-    font-family: "Inter-Regular", Helvetica;
+    font-family: "Inter-Regular", "Helvetica", "Roboto", sans-serif;
 }
 
 input#password-input {
@@ -77,13 +77,14 @@ input#password-input {
 }
 
 .column-left h1 {
-    font-family: "Inter-Regular", Helvetica;
+    font-family: "Inter-Regular", "Helvetica", "Roboto", sans-serif;
     font-weight: 400;
     color: #000000;
     font-size: 35px;
 }
 
 .column-left p {
+    font-family: "Inter-Regular", "Helvetica", "Roboto", sans-serif;
     font-size: 15px;
 }
 
@@ -156,7 +157,7 @@ input#password-input {
 
 .table {
     margin: 0 auto;
-    width: 370px;
+    width: 365px;
 }
 
 .rule-text {

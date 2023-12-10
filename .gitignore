@@ -1,2 +1,17 @@
+# macOS, vim, emacs, VSCode goofiness.
+.DS_STORE
+.DS_STORE?
+*~
+*#
+.#*
+.nfs*
+.*.sw?
+*.bak
+._*
+.vscode
+
 # Test files from Roger.
 rulePAG.ts
+
+# Adobe Illustrator project files.
+logo.ai
