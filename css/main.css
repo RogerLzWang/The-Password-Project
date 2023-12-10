@@ -250,3 +250,8 @@ li {
     left: -6px;
     content: "! ";
 }
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+}
